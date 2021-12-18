@@ -1,12 +1,12 @@
 const siteMetadata = {
-  title: 'Fiqrychoerudin.dev',
+  title: 'Fiqry choerudin 👋',
   author: 'Fiqry choerudin',
   headerTitle: '',
   description:
     'I was born in 1999. Being programmer since college in University. working as Frontend Developer. love making open source projects on Github.',
   language: 'en-us',
-  siteUrl: '',
-  siteRepo: '',
+  siteUrl: 'https://fiqrychoerudin.dev',
+  siteRepo: 'https://github.com/fiqryq/Fiqrychoerudin.dev',
   siteLogo: '👋',
   image: '/static/images/avatar.png',
   socialBanner: '/static/images/twitter-card.png',
