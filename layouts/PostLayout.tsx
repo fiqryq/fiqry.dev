@@ -2,8 +2,6 @@ import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSEO } from '@/components/SEO'
-import Image from '@/components/Image'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import Comments from '@/components/comments'
 import { ReactNode } from 'react'
@@ -26,13 +24,11 @@ const postDateTemplate: Intl.DateTimeFormatOptions = {
 interface Props {
   frontMatter: PostFrontMatter
   authorDetails: AuthorFrontMatter[]
-  next?: { slug: string; title: string }
-  prev?: { slug: string; title: string }
   children: ReactNode
 }
 
-export default function PostLayout({ frontMatter, authorDetails, next, prev, children }: Props) {
-  const { slug, fileName, date, title, tags } = frontMatter
+export default function PostLayout({ frontMatter, authorDetails, children }: Props) {
+  const { slug, fileName, date, title } = frontMatter
 
   return (
     <SectionContainer>

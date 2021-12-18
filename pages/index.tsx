@@ -33,12 +33,15 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           </div>
         </div>
         <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-4xl md:leading-14">
-          📋 Recent Post
+          <span className="pr-2" role="img" aria-label="wave">
+            📋
+          </span>
+          Recent Post
         </h1>
         <ul className="sdivide-gray-200 dark:divide-gray-700">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-            const { slug, date, title, summary, tags } = frontMatter
+            const { slug, title, summary, tags } = frontMatter
             return (
               <li key={slug} className="py-3">
                 <article className="bg-gray-200 bg-opacity-20 dark:bg-gradient-to-br dark:from-gray-900 dark:to-gray-800 p-5 rounded-lg">
