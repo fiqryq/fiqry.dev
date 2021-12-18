@@ -9,7 +9,7 @@ const siteMetadata = {
   siteRepo: 'https://github.com/fiqryq/Fiqrychoerudin.dev',
   siteLogo: '👋',
   image: '/static/images/avatar.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/banner.png',
   email: 'halo@fiqrychoerudin.dev',
   github: 'https://github.com/fiqryq',
   twitter: 'https://twitter.com/fiqryq_',
