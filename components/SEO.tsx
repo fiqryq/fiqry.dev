@@ -46,19 +46,18 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage }: CommonSEOPr
 interface PageSEOProps {
   title: string
   description: string
-  banner: string
 }
 
-export const PageSEO = ({ title, description, banner }: PageSEOProps) => {
-  // const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  // const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
+export const PageSEO = ({ title, description }: PageSEOProps) => {
+  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
+  const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
   return (
     <CommonSEO
       title={title}
       description={description}
       ogType="website"
-      ogImage={banner}
-      twImage={banner}
+      ogImage={ogImageUrl}
+      twImage={twImageUrl}
     />
   )
 }
@@ -158,7 +157,7 @@ export const BlogSEO = ({
   }
 
   const twImageUrl = featuredImages[0].url
-  console.log(twImageUrl)
+
   return (
     <>
       <CommonSEO
