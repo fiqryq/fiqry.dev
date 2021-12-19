@@ -5,7 +5,7 @@ const siteMetadata = {
   description:
     'I was born in 1999. Being programmer since college in University. working as Frontend Developer. love making open source projects on Github.',
   language: 'en-us',
-  siteUrl: 'https://fiqrychoerudin.dev/',
+  siteUrl: 'https://fiqrychoerudin.dev',
   siteRepo: 'https://github.com/fiqryq/Fiqrychoerudin.dev',
   siteLogo: '/public/static/images/avatar.png',
   image: '/static/images/avatar.png',
