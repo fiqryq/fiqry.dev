@@ -46,13 +46,12 @@ const CommonSEO = ({ title, description, ogType, ogImage, twImage }: CommonSEOPr
 interface PageSEOProps {
   title: string
   description: string
+  banner: string
 }
 
-export const PageSEO = ({ title, description }: PageSEOProps) => {
+export const PageSEO = ({ title, description, banner }: PageSEOProps) => {
   // const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
   // const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  const banner = siteMetadata.socialBanner
-
   return (
     <CommonSEO
       title={title}
@@ -65,9 +64,8 @@ export const PageSEO = ({ title, description }: PageSEOProps) => {
 }
 
 export const TagSEO = ({ title, description }: PageSEOProps) => {
-  // const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  // const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  const banner = siteMetadata.socialBanner
+  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
+  const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
   const router = useRouter()
   return (
     <>
@@ -75,8 +73,8 @@ export const TagSEO = ({ title, description }: PageSEOProps) => {
         title={title}
         description={description}
         ogType="website"
-        ogImage={banner}
-        twImage={banner}
+        ogImage={ogImageUrl}
+        twImage={twImageUrl}
       />
       <Head>
         <link
