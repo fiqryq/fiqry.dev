@@ -63,8 +63,9 @@ export const PageSEO = ({ title, description }: PageSEOProps) => {
 }
 
 export const TagSEO = ({ title, description }: PageSEOProps) => {
-  const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
-  const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
+  // const ogImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
+  // const twImageUrl = siteMetadata.siteUrl + siteMetadata.socialBanner
+  const banner = siteMetadata.socialBanner
   const router = useRouter()
   return (
     <>
@@ -72,8 +73,8 @@ export const TagSEO = ({ title, description }: PageSEOProps) => {
         title={title}
         description={description}
         ogType="website"
-        ogImage={ogImageUrl}
-        twImage={twImageUrl}
+        ogImage={banner}
+        twImage={banner}
       />
       <Head>
         <link
@@ -157,7 +158,7 @@ export const BlogSEO = ({
   }
 
   const twImageUrl = featuredImages[0].url
-
+  console.log(twImageUrl)
   return (
     <>
       <CommonSEO
