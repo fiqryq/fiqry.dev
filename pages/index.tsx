@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps<{ posts: PostFrontMatter[] }> = asyn
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <PageSEO title={'Fiqry choerudin'} description={'Test'} />
+      <PageSEO title={siteMetadata.author} description={siteMetadata.description} />
       <div className=" divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <div className="flex flex-col space-y-3">
