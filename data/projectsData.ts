@@ -34,7 +34,7 @@ const projectsData = [
     title: 'Nabung',
     description: `Simple app for tracking income and expense its already 10K+ download on playstore.`,
     imgSrc: '/static/images/project/nabung.png',
-    href: 'https://play.google.com/store/apps/details?id=org.d3ifcool.nabung',
+    href: '/blog/projects/Nabung',
   },
 ]
 
