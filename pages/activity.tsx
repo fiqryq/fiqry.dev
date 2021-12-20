@@ -1,34 +1,29 @@
-import siteMetadata from '@/data/siteMetadata'
-import { PageSEO } from '@/components/SEO'
+import { MDXLayoutRenderer } from '@/components/MDXComponents'
+import { getFileBySlug } from '@/lib/mdx'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
+import { ActivityFrontMatter } from 'types/ActivityFrontMatter'
 
-export default function activity() {
+const DEFAULT_LAYOUT = 'ActivityLayout'
+
+// @ts-ignore
+export const getStaticProps: GetStaticProps<{
+  activityDetails: { mdxSource: string; frontMatter: ActivityFrontMatter }
+}> = async () => {
+  const activityDetails = await getFileBySlug<ActivityFrontMatter>('activity', ['default'])
+  const { mdxSource, frontMatter } = activityDetails
+  return { props: { activityDetails: { mdxSource, frontMatter } } }
+}
+
+export default function Activity({
+  activityDetails,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { mdxSource, frontMatter } = activityDetails
+
   return (
-    <>
-      <PageSEO title={`Activity - ${siteMetadata.author}`} description={siteMetadata.description} />
-      <div className="">
-        <div className="pt-6 pb-8 space-y-2 md:space-y-5">
-          <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            Activity
-          </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">List my activity</p>
-        </div>
-        <div>
-          <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-3xl md:leading-14">
-            <span className="pr-2" role="img" aria-label="wave">
-              🌳
-            </span>
-            Github.
-          </h1>
-        </div>
-        <div>
-          <h1 className="text-2xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-3xl sm:leading-10 md:text-3xl md:leading-14">
-            <span className="pr-2" role="img" aria-label="wave">
-              📚
-            </span>
-            Today I Learned.
-          </h1>
-        </div>
-      </div>
-    </>
+    <MDXLayoutRenderer
+      layout={frontMatter.layout || DEFAULT_LAYOUT}
+      mdxSource={mdxSource}
+      frontMatter={frontMatter}
+    />
   )
 }
