@@ -27,14 +27,17 @@ export default function ListLayout({ posts, title, initialDisplayPosts = [], pag
       <div className="">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
+            <span role="img" className="mr-4" aria-label="wave">
+              📝
+            </span>
             {title}
           </h1>
           <div className="relative max-w-full">
             <input
-              aria-label="Search articles"
+              aria-label="Search articles / snippets / app"
               type="text"
               onChange={(e) => setSearchValue(e.target.value)}
-              placeholder="Search articles"
+              placeholder="Search articles / snippets / app"
               className="block w-full px-4 py-2 text-gray-900 bg-white border border-gray-300 rounded-md dark:border-gray-900 focus:ring-pink-500 focus:border-pink-500 dark:bg-gray-800 dark:text-gray-100"
             />
             <svg
