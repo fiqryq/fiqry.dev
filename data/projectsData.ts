@@ -3,7 +3,7 @@ const projectsData = [
     title: 'NFT Market',
     description: `About
     slicing NFT marketplace design to code using tailwind.`,
-    imgSrc: '/static/images/project/NFTmarket.png',
+    imgSrc: '/static/images/project/nft-market.png',
     href: 'https://nft-marketplace-collection-fiqryq.vercel.app/',
   },
   {
