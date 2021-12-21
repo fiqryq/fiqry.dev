@@ -18,6 +18,12 @@ const projectsData = [
     href: 'https://github.com/fiqryq/Pantaucovid-android',
   },
   {
+    title: 'Kochenk',
+    description: `Simple fetch api using reactjs and tailwind.`,
+    imgSrc: '/static/images/github/Kochenk.png',
+    href: 'https://github.com/fiqryq/Pantaucovid-discord',
+  },
+  {
     title: 'Pantaucovid-bot',
     description: `A chat bot for Discord, built on top of discord.js using api mathdroid.`,
     imgSrc: '/static/images/github/Pantaucovid-bot.png',
