@@ -3,7 +3,7 @@ const projectsData = [
     title: 'NFT Market',
     description: `About
     slicing NFT marketplace design to code using tailwind.`,
-    imgSrc: '/static/images/project/nft-market.png',
+    imgSrc: '/static/images/project/NFTmarket.png',
     href: 'https://nft-marketplace-collection-fiqryq.vercel.app/',
   },
   {
@@ -11,12 +11,6 @@ const projectsData = [
     description: `Coding challenge slicing NFT Market using Reactjs + tailwind 2.`,
     imgSrc: '/static/images/project/onestop-market.png',
     href: 'https://onestop-nft-market.fiqrychoerudin.dev/',
-  },
-  {
-    title: 'Quran Digital',
-    description: `Simple Al-Quran app using vue and axios.`,
-    imgSrc: '/static/images/project/quran.png',
-    href: 'https://al-qurandigital.netlify.app/',
   },
   {
     title: 'Piq.ts',
