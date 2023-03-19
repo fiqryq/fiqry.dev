@@ -31,7 +31,7 @@
     "@typescript-eslint/parser": "^5.0.0",
     "@vercel/og": "^0.4.0",
     "clsx": "^1.2.1",
-    "contentlayer": "^0.2.9",
+    "contentlayer": "^0.3.0",
     "date-fns": "^2.29.3",
     "eslint-plugin-simple-import-sort": "^9.0.0",
     "eslint-plugin-unused-imports": "^2.0.0",
