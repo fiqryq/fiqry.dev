@@ -1,0 +1,153 @@
+@import 'variable';
+@import 'mixin';
+
+.hero {
+    @include center-content(column);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .logo {
+        font-size: x-large;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .nav_container {
+        box-sizing: border-box;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 50px 30px 50px;
+    }
+
+    .nav_menu > li {
+        display: inline-block;
+        margin-left: 1rem;
+    }
+
+    .nav_menu > li > a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding-bottom: 0.4rem;
+        position: relative;
+        color: $base-color;
+    }
+
+    .nav_menu > li > a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2.5px;
+        bottom: 0;
+        left: 0;
+        background-color: $base-color;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      
+      .nav_menu > li > a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+    .hero_title {
+        color: $base-color;
+        font-size: $hero-title-size;
+        text-align: center;
+        font-weight: 700;
+        letter-spacing: -0.08em;
+    }
+
+    .hero_title::selection {
+        color: white;
+        background: black;
+    }
+
+    .hero_subtitle {
+        max-width: 700px;
+        font-size: 1.375rem;
+        margin-top: 1rem;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .hero_subtitle::selection {
+        color: white;
+        background: black;
+    }
+
+    /* Svg mouse container */
+
+    .mouse_container {
+        position: absolute;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        bottom: 0;
+    }
+
+    .mouse_scroll_title {
+        margin-top: 1.5rem;
+    }
+    .mouse_scroll_title::selection {
+        color: white;
+        background: black;
+    }
+
+    svg {
+        fill: #000;
+      }
+      
+      circle {
+        animation: scroll 1.5s ease infinite;
+      }
+    
+    /* Svg mouse animation */
+
+    @keyframes scroll {
+        0% { 
+          opacity: 0;
+          cy: 481;
+        }
+        33% {
+          opacity: 1;
+        }
+        100% { 
+          opacity: 0;
+          cy: 231;
+        }
+    }
+      
+}
+
+.about_section {
+    @include center-content();
+    background: black;
+    padding: 50px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+
+    .about {
+        color: white;
+        font-size: $about-text-size;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+        text-align: start;
+    }
+
+    .about::selection {
+        color: black;
+        background: white;
+    }
+}
