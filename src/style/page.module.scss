@@ -1,0 +1,219 @@
+@import 'variable';
+@import 'mixin';
+
+.preload {
+    @include center-content(column);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    transform-origin: top;
+    background: black;
+
+    .loading_text {
+        position: relative;
+        height: 30px;
+        overflow: hidden;
+        width: 10%;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .loading_text > span {
+        position: absolute;
+        left: 0;
+        width: 100%
+    }
+}
+
+.hero {
+    @include center-content(column);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    .logo {
+        font-size: x-large;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .nav_container {
+        box-sizing: border-box;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 50px 30px 50px;
+    }
+
+    .nav_menu > li {
+        display: inline-block;
+        margin-left: 1rem;
+    }
+
+    .nav_menu > li > a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding-bottom: 0.4rem;
+        position: relative;
+        color: $base-color;
+    }
+
+    .nav_menu > li > a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2.5px;
+        bottom: 0;
+        left: 0;
+        background-color: $base-color;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+      
+      .nav_menu > li > a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+
+    .hero_title {
+        color: $base-color;
+        font-size: 7.5rem;
+        text-align: center;
+        font-weight: 700;
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+        position: relative;
+        letter-spacing: -0.08em;
+    }
+
+    .hero_title > span {
+        left: 0;
+        top: 0;
+        width: 100%;
+        position: absolute;
+    }
+
+    .hero_title > span::selection {
+        color: white;
+        background: black;
+    }
+
+    .hero_subtitle {
+        overflow: hidden;
+        position: relative;
+        max-width: 700px;
+        font-size: 1.375rem;
+        margin-top: 1rem;
+        text-align: center;
+        font-weight: 500;
+        height: 50px;
+        width: 100%;
+        text-transform: uppercase;
+    }
+
+    .hero_subtitle > span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    .hero_subtitle > span::selection {
+        color: white;
+        background: black;
+    }
+
+    .mouse_container {
+        position: absolute;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        bottom: 0;
+    }
+
+    .mouse_scroll_title {
+        margin-top: 1.5rem;
+    }
+    .mouse_scroll_title::selection {
+        color: white;
+        background: black;
+    }
+
+    svg {
+        fill: #000;
+      }
+      
+      circle {
+        animation: scroll 1.5s ease infinite;
+      }
+    
+    @keyframes scroll {
+        0% { 
+          opacity: 0;
+          cy: 481;
+        }
+        33% {
+          opacity: 1;
+        }
+        100% { 
+          opacity: 0;
+          cy: 231;
+        }
+    }
+      
+}
+
+.about_section {
+    @include center-content(column,flex-start);
+    background: yellowgreen;
+    padding: 50px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+
+    .about {
+        margin-top: 1rem;
+        color: white;
+        font-size: $about-text-size;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+        text-align: start
+    }
+
+    .about::selection {
+        color: black;
+        background: white;
+    }
+
+    .greetings {
+        color: white;
+        font-size: 7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+        text-align: start;
+        background-image: linear-gradient(white , white);
+        background-size: 0% 100%;
+        color: white;
+        background-repeat: no-repeat;
+        transition: background-size 1s ease-in , color 2s;
+    }
+    
+    .greetings_mark_active {
+        color: black;
+        background-size: 100% 100%;
+    }
+}
