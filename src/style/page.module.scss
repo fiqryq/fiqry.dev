@@ -1,6 +1,34 @@
 @import 'variable';
 @import 'mixin';
 
+.preload {
+    @include center-content(column);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    transform-origin: top;
+    background: black;
+
+    .loading_text {
+        position: relative;
+        height: 30px;
+        overflow: hidden;
+        width: 10%;
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+    }
+
+    .loading_text > span {
+        position: absolute;
+        left: 0;
+        width: 100%
+    }
+}
+
 .hero {
     @include center-content(column);
     width: 100%;
@@ -60,31 +88,51 @@
 
     .hero_title {
         color: $base-color;
-        font-size: $hero-title-size;
+        font-size: 7.5rem;
         text-align: center;
         font-weight: 700;
+        width: 100%;
+        height: 150px;
+        overflow: hidden;
+        position: relative;
         letter-spacing: -0.08em;
     }
 
-    .hero_title::selection {
+    .hero_title > span {
+        left: 0;
+        top: 0;
+        width: 100%;
+        position: absolute;
+    }
+
+    .hero_title > span::selection {
         color: white;
         background: black;
     }
 
     .hero_subtitle {
+        overflow: hidden;
+        position: relative;
         max-width: 700px;
         font-size: 1.375rem;
         margin-top: 1rem;
         text-align: center;
         font-weight: 500;
+        height: 50px;
+        width: 100%;
+        text-transform: uppercase;
     }
 
-    .hero_subtitle::selection {
+    .hero_subtitle > span {
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    .hero_subtitle > span::selection {
         color: white;
         background: black;
     }
-
-    /* Svg mouse container */
 
     .mouse_container {
         position: absolute;
@@ -111,8 +159,6 @@
         animation: scroll 1.5s ease infinite;
       }
     
-    /* Svg mouse animation */
-
     @keyframes scroll {
         0% { 
           opacity: 0;
@@ -130,24 +176,44 @@
 }
 
 .about_section {
-    @include center-content();
-    background: black;
+    @include center-content(column,flex-start);
+    background: yellowgreen;
     padding: 50px;
     box-sizing: border-box;
     width: 100%;
     height: 100vh;
 
     .about {
+        margin-top: 1rem;
         color: white;
         font-size: $about-text-size;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: -0.05em;
-        text-align: start;
+        text-align: start
     }
 
     .about::selection {
         color: black;
         background: white;
+    }
+
+    .greetings {
+        color: white;
+        font-size: 7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: -0.05em;
+        text-align: start;
+        background-image: linear-gradient(white , white);
+        background-size: 0% 100%;
+        color: white;
+        background-repeat: no-repeat;
+        transition: background-size 1s ease-in , color 2s;
+    }
+    
+    .greetings_mark_active {
+        color: black;
+        background-size: 100% 100%;
     }
 }

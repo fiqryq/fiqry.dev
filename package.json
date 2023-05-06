@@ -14,13 +14,14 @@
     "@types/node": "18.16.3",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.1",
+    "classnames": "^2.3.2",
     "eslint": "8.39.0",
-    "eslint-config-next": "13.3.4",
+    "eslint-config-next": "^13.4.0",
     "gsap": "^3.11.5",
     "mouse-follower": "^1.1.2",
-    "next": "13.3.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "next": "^13.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "5.0.4"
   },
   "devDependencies": {

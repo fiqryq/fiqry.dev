@@ -8,6 +8,7 @@ import React from 'react';
 interface Props extends React.HTMLAttributes<HTMLBodyElement> {
     children: React.ReactNode
 }
+
 MouseFollower.registerGSAP(gsap);
 
 const MainWrapper = React.forwardRef<HTMLBodyElement, Props>(
@@ -16,13 +17,13 @@ const MainWrapper = React.forwardRef<HTMLBodyElement, Props>(
 
         React.useEffect(() => {
             new MouseFollower({
-                speed: 0.3,
+                speed: 0.4,
             });
         })
 
         React.useEffect(() => {
             scrollRef.current = new Lenis({
-                duration: 2,
+                duration: 1.5,
                 easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
                 orientation: 'vertical',
                 gestureOrientation: 'vertical',

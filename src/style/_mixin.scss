@@ -1,7 +1,7 @@
-@mixin center-content($direction:column) {
+@mixin center-content($direction:column , $align:center) {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: $align;
     flex-direction: $direction;
 }
 
@@ -9,3 +9,37 @@
     padding-left: $left;
     padding-right: $right;
 }
+
+@mixin custom-scroll-bar() {
+    &::-webkit-scrollbar {
+      border-radius: 10px;
+      height: 10px;
+      width: 8px;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: #999;
+      border-radius: 10px;
+    }
+  
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+    }
+  }
+
+  @mixin no-scroll-bar() {
+    &::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      height: 0;
+      width: 0;
+    }
+  
+    &::-webkit-scrollbar-track {
+      height: 0;
+      width: 0;
+    }
+  }

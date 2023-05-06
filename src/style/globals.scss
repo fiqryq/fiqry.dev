@@ -1,6 +1,12 @@
 @import 'cursor';
+@import 'mixin';
 
 * {
     margin: 0;
     padding: 0;
+}
+
+
+body {
+    @include no-scroll-bar()
 }
