@@ -1,8 +1,8 @@
 "use client";
 
-import { useTransitionState } from "@/hooks/use-transition";
 import { ComponentProps, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { useTransitionState } from "../transition";
 
 export function Reveal({
     children,

@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { gsap } from "gsap";
-import { TransitionRouter } from "@/hooks/use-transition";
+import { TransitionRouter } from "./context";
 
 export function Providers({ children }: { children: React.ReactNode }) {
     const firstLayer = useRef<HTMLDivElement | null>(null);
@@ -23,7 +23,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
                         { y: "100%" },
                         {
                             y: 0,
-                            duration: 0.5,
+                            duration: 0.7,
                             ease: "circ.inOut",
                         },
                     )
@@ -34,7 +34,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
                         },
                         {
                             y: 0,
-                            duration: 0.5,
+                            duration: 0.7,
                             ease: "circ.inOut",
                         },
                         "<50%",
@@ -52,7 +52,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
                         { y: 0 },
                         {
                             y: "-100%",
-                            duration: 0.5,
+                            duration: 0.7,
                             ease: "circ.inOut",
                         },
                     )
@@ -61,7 +61,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
                         { y: 0 },
                         {
                             y: "-100%",
-                            duration: 0.5,
+                            duration: 0.7,
                             ease: "circ.inOut",
                         },
                         "<50%",
@@ -81,7 +81,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
             />
             <div
                 ref={secondLayer}
-                className="fixed inset-0 z-50 translate-y-full bg-foreground"
+                className="fixed inset-0 z-50 translate-y-full bg-yellow-300"
             />
         </TransitionRouter>
     );

@@ -12,12 +12,13 @@ export default function Home() {
         <div className="flex flex-col justify-center min-h-screen relative border-b-[0.5px] border-[#42433E] mb-10">
           <Title className="px-5 md:px-10 lg:px-20">
             <div className="pl-2 md:pl-5 overflow-hidden lg:pl-10 text-[60px] md:text-[120px] lg:text-[240px] font-ppmori-semi-bold text-primary tracking-tight leading-none">
-              <span className="block">A Creative</span>
+              <span className="block">Creative</span>
             </div>
             <div className="pr-2 md:pr-5 overflow-hidden lg:pr-10 text-[60px] md:text-[120px] lg:text-[240px] font-ppmori-semi-bold text-primary tracking-tight text-end leading-none">
               <span className="block">Developer</span>
             </div>
           </Title>
+
           <div className="inline-flex items-center absolute bottom-10 gap-2 md:gap-4">
             <span className="text-[32px] md:text-[48px] lg:text-[64px] font-ppmori-regular text-primary">{`{`}</span>
             <p className="text-primary text-sm md:text-lg lg:text-xl font-ppmori-regular flex items-center space-x-2">

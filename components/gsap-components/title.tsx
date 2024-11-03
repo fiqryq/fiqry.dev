@@ -1,9 +1,9 @@
 "use client";
 
-import { useTransitionState } from "@/hooks/use-transition";
 import { cn } from "@/lib/utils";
 import { gsap } from "gsap";
 import { useLayoutEffect, useRef } from "react";
+import { useTransitionState } from "../transition";
 
 export function Title({
     children,
